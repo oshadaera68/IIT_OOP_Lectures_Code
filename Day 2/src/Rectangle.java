@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Coded By: Era Boy
  * Version: v0.1.0
@@ -82,5 +84,18 @@ public class Rectangle {
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return Double.compare(length, rectangle.length) == 0 && Double.compare(width, rectangle.width) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(length, width);
     }
 }
