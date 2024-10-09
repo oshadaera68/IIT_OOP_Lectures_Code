@@ -5,10 +5,14 @@
 
 public class Test {
     public static void main(String[] args) {
-        Cat obj = new Cat();
-        obj.age = -5;
-        obj.name = "Terry";
-        obj.type = CatType.PERSIAN;
+        // Object creation
+        Cat obj = new Cat("Terry", 5, CatType.PERSIAN);
+
+        // after object creation
+        System.out.println(obj);
+        obj.setAge(5);
+        obj.setName("Terry");
+
 
     }
 }
