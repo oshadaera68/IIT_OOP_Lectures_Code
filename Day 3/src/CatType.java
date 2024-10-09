@@ -1,0 +1,6 @@
+public enum CatType {
+    PERSIAN,
+    MAINECOON,
+    RAGDOLL,
+    BENGAL
+}
