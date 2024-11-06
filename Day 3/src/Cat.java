@@ -8,14 +8,14 @@ public class Cat {
     private int age;
     private CatType type;
 
-    public Cat(String name, int age, CatType type) {
+    public Cat(String name, int age, CatType type) { 
         this.name = name;
         // this.age = age;
         this.setAge(age);
         this.type = type;
     }
 
-    public String getName() {
+    public String getName() { 
         return name;
     }
 

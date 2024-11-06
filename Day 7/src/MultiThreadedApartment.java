@@ -19,10 +19,14 @@ public class MultiThreadedApartment {
             /*
              * Implementation of runnable interface
              *`override the run method
-             *
              */
             for (int i = 0; i < 10; i++) {
                 System.out.println(Thread.currentThread().getName() + "Hello world");
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
         }, "Thread03");

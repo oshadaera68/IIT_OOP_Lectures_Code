@@ -6,6 +6,7 @@
 public class Test {
     public static void main(String[] args) {
         Student obj = new Student("Era", "Boy", "12345");
-        obj.
+        obj.enrollCourse("Java");
+        obj.enrollModules(List.of("Java", "Python", "C++"));
     }
 }
