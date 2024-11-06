@@ -12,10 +12,20 @@ public class MultiThreadedApartment {
         t1.start();
 
         Runnable r1 = new MyRunnable();
-        Thread t2 = new Thread(r1);
+        Thread t2 = new Thread(r1, "Thread02");
         t2.start();
 
+        Thread t3 = new Thread(() -> {
+            /*
+             * Implementation of runnable interface
+             *`override the run method
+             *
+             */
+            for (int i = 0; i < 10; i++) {
+                System.out.println(Thread.currentThread().getName() + "Hello world");
+            }
+
+        }, "Thread03");
+        t3.start();
     }
-
-
 }
